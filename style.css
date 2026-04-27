@@ -1,0 +1,152 @@
+/* FILE: style.css */
+
+body {
+    font-family: Georgia, serif;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #222;
+    padding: 0 20px;
+    background: #ffffff;
+}
+
+.highlight {
+    color: #830f1e;
+    text-decoration: none;
+}
+
+.highlight:hover {
+    text-decoration: underline;
+}
+
+
+.footer {
+    margin-top: 80px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer a {
+    margin: 0 18px;
+    font-size: 2.2rem;   /* bigger icons */
+    color: #0b2a5b;      /* main color */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #830f1e;      /* your accent */
+}
+
+/* Top navigation bar */
+nav {
+    background-color: #0b2a5b; /* dark blue */
+    padding: 14px 20px;
+    margin: 0 -20px 30px;
+}
+
+nav a {
+    margin-right: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #cbd5f5;
+}
+
+h1 {
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+img.profile {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}
+main {
+    max-width: 900px;
+}
+
+section {
+    margin-top: 40px;
+}
+
+h2 {
+    margin-bottom: 14px;
+    color: #0b2a5b;
+    font-weight: normal;
+}
+.small {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.small a {
+    color: #444;
+    text-decoration: none;
+}
+
+.small a:hover {
+    text-decoration: underline;
+}
+
+.teaching-figure {
+    margin: 20px 0 35px 0;
+}
+
+.teaching-photo {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.caption {
+    margin-top: 8px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.research-section {
+    margin-top: 50px;
+}
+
+.full-width {
+    margin-bottom: 20px;
+}
+
+.research-block {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.research-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+@media (max-width: 850px) {
+    .research-block {
+        grid-template-columns: 1fr;
+    }
+}
