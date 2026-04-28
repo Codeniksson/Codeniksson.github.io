@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +13,16 @@
 
 <body>
 
+
+
 <nav>
     <a href="index.html">Home</a>
     <a href="research.html">Research</a>
     <a href="teaching.html">Teaching</a>
+    <span id="theme-toggle" class="theme-icon">☾</span>
 </nav>
+
+
 
 
 <h1>Welcome to my homepage!</h1>
@@ -30,6 +37,12 @@
         <p>My name is <strong>Anna Oleynik</strong>, and I am a researcher in Applied Mathematics at the <strong><a href="https://www.uib.no" class="highlight" target="_blank">
     University of Bergen</a></strong>.</p>
 
+         <p>
+        I received my PhD in applied mathematics from the Norwegian University of Life Sciences (NMBU) in 2011.
+        After that, I was a guest researcher at Johannes Gutenberg University in Mainz, and later held positions at
+        Uppsala University, Örebro University, and NMBU, before joining the University of Bergen.
+        </p> 
+        
         <p>
             My work focuses on mathematical modelling, dynamical systems, optimization, and numerical simulations.
         </p>
@@ -37,10 +50,14 @@
         <p>
             Current topics include marine monitoring, epidemiological modelling, portfolio optimization, and data-driven methods.
         </p>
-      
         
+       
     </div>
 </div>
+<p>
+        Please feel free to browse the site to learn more about my research and teaching activities, 
+        or use the buttons below to connect with me on GitHub, LinkedIn, or Google Scholar. 
+        </p>
 <footer class="footer">
     <a href="https://github.com/Codeniksson" target="_blank">
         <i class="fab fa-github"></i>
@@ -55,5 +72,34 @@
     </a>
 </footer>
 
+<script>
+const button = document.getElementById("theme-toggle");
+
+function updateIcon() {
+    if (document.body.classList.contains("dark")) {
+        button.textContent = "☀";
+    } else {
+        button.textContent = "☾";
+    }
+}
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+}
+
+updateIcon();
+
+button.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+
+    updateIcon();
+});
+</script>
 </body>
 </html>
