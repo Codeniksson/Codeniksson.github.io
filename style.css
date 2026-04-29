@@ -214,3 +214,13 @@ body.dark #theme-toggle {
     line-height: 1;
     display: inline-block;
 }
+
+.research-video {
+    margin-top: 20px;
+}
+
+.research-video video {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+}
